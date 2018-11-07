@@ -1,0 +1,17 @@
+#Python program
+#rectifies the E-Mail id and displayes the correct ID.
+
+import array
+import re
+
+
+
+text = input("Enter the email address: ")
+
+p=re.sub('\(at\)|at','@',text)   #replaces at with @
+
+p=re.sub('\(dot\)|dot','.',p)    #replaces dot with .
+
+final=re.sub('[^-\.@+a-zA-Z0-9_]','',p)  #finally replaces all the characters other than alphabets with blank
+
+print("the corrected address is :",final)
